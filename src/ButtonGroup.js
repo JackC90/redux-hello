@@ -7,7 +7,7 @@ const ButtonGroup = ({ technologies }) => (
     {technologies.map((tech, i) => (
       <button 
         data-tech={tech}
-        key={`btn-${i}`}
+        key={"btn-"+i}
         className="hello-btn"
         onClick={dispatchBtnAction}
       >
@@ -19,7 +19,6 @@ const ButtonGroup = ({ technologies }) => (
 
 function dispatchBtnAction(e) {
   const tech = e.target.dataset.tech;
-  debugger
   store.dispatch(setTechnology(tech));
 }
 
